@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" width="900" height="360">
+<text x="12" y="22" font-size="13" letter-spacing="1" fill="#B9B4B0" font-family="Kanit, Arial, Helvetica, sans-serif">GLASS SPONGE LATTICE · CB-PLA</text>
+<rect x="12" y="34" width="200" height="216" rx="12" fill="#1A1A1A" stroke="#945937" stroke-width="2"/>
+<path d="M12 46 a12 12 0 0 1 12 -12 h176 a12 12 0 0 1 12 12 v22 h-200 Z" fill="#945937"/>
+<text x="112.0" y="57" text-anchor="middle" font-size="14" font-weight="600" fill="#F9F9F9" font-family="Kanit, Arial, Helvetica, sans-serif">ROUND 1</text>
+<text x="112.0" y="96" text-anchor="middle" font-size="17" fill="#F9F9F9" font-family="Kanit, Arial, Helvetica, sans-serif">Line thickness</text>
+<text x="112.0" y="124" text-anchor="middle" font-size="13" fill="#B9B4B0" font-family="Kanit, Arial, Helvetica, sans-serif">Plain 3×4 grid vs.</text>
+<text x="112.0" y="143" text-anchor="middle" font-size="13" fill="#B9B4B0" font-family="Kanit, Arial, Helvetica, sans-serif">1.0 · 1.5 · 2.0 · 2.5 mm</text>
+<text x="112.0" y="162" text-anchor="middle" font-size="13" fill="#B9B4B0" font-family="Kanit, Arial, Helvetica, sans-serif">diagonal lines</text>
+<rect x="28" y="192" width="168" height="46" rx="8" fill="#000" stroke="#FFB673" stroke-width="1.5"/>
+<text x="112.0" y="211" text-anchor="middle" font-size="13" font-weight="600" fill="#FFB673" font-family="Kanit, Arial, Helvetica, sans-serif">1.0 mm wins</text>
+<text x="112.0" y="229" text-anchor="middle" font-size="12" fill="#F9F9F9" font-family="Kanit, Arial, Helvetica, sans-serif">456.73 N avg</text>
+<path d="M215 142 L229 142" stroke="#FFB673" stroke-width="3"/><path d="M227 135 L236 142 L227 149 Z" fill="#FFB673"/>
+<rect x="238" y="34" width="200" height="216" rx="12" fill="#1A1A1A" stroke="#945937" stroke-width="2"/>
+<path d="M238 46 a12 12 0 0 1 12 -12 h176 a12 12 0 0 1 12 12 v22 h-200 Z" fill="#945937"/>
+<text x="338.0" y="57" text-anchor="middle" font-size="14" font-weight="600" fill="#F9F9F9" font-family="Kanit, Arial, Helvetica, sans-serif">ROUND 1.5</text>
+<text x="338.0" y="96" text-anchor="middle" font-size="17" fill="#F9F9F9" font-family="Kanit, Arial, Helvetica, sans-serif">Double-check</text>
+<text x="338.0" y="124" text-anchor="middle" font-size="13" fill="#B9B4B0" font-family="Kanit, Arial, Helvetica, sans-serif">Added 0.75 · 0.9 ·</text>
+<text x="338.0" y="143" text-anchor="middle" font-size="13" fill="#B9B4B0" font-family="Kanit, Arial, Helvetica, sans-serif">1.25 mm to see if</text>
+<text x="338.0" y="162" text-anchor="middle" font-size="13" fill="#B9B4B0" font-family="Kanit, Arial, Helvetica, sans-serif">1.0 mm is really best</text>
+<rect x="254" y="192" width="168" height="46" rx="8" fill="#000" stroke="#FFB673" stroke-width="1.5"/>
+<text x="338.0" y="211" text-anchor="middle" font-size="13" font-weight="600" fill="#FFB673" font-family="Kanit, Arial, Helvetica, sans-serif">1.0 mm confirmed</text>
+<text x="338.0" y="229" text-anchor="middle" font-size="12" fill="#F9F9F9" font-family="Kanit, Arial, Helvetica, sans-serif">0.75 mm: 165.7 N</text>
+<path d="M441 142 L455 142" stroke="#FFB673" stroke-width="3"/><path d="M453 135 L462 142 L453 149 Z" fill="#FFB673"/>
+<rect x="464" y="34" width="200" height="216" rx="12" fill="#1A1A1A" stroke="#945937" stroke-width="2"/>
+<path d="M464 46 a12 12 0 0 1 12 -12 h176 a12 12 0 0 1 12 12 v22 h-200 Z" fill="#945937"/>
+<text x="564.0" y="57" text-anchor="middle" font-size="14" font-weight="600" fill="#F9F9F9" font-family="Kanit, Arial, Helvetica, sans-serif">ROUND 2</text>
+<text x="564.0" y="96" text-anchor="middle" font-size="17" fill="#F9F9F9" font-family="Kanit, Arial, Helvetica, sans-serif">Line spacing</text>
+<text x="564.0" y="124" text-anchor="middle" font-size="13" fill="#B9B4B0" font-family="Kanit, Arial, Helvetica, sans-serif">Offsets from −1.0</text>
+<text x="564.0" y="143" text-anchor="middle" font-size="13" fill="#B9B4B0" font-family="Kanit, Arial, Helvetica, sans-serif">to +1.0 mm in</text>
+<text x="564.0" y="162" text-anchor="middle" font-size="13" fill="#B9B4B0" font-family="Kanit, Arial, Helvetica, sans-serif">0.5 mm steps</text>
+<rect x="480" y="192" width="168" height="46" rx="8" fill="#000" stroke="#FFB673" stroke-width="1.5"/>
+<text x="564.0" y="211" text-anchor="middle" font-size="13" font-weight="600" fill="#FFB673" font-family="Kanit, Arial, Helvetica, sans-serif">+0.5 mm wins</text>
+<text x="564.0" y="229" text-anchor="middle" font-size="12" fill="#F9F9F9" font-family="Kanit, Arial, Helvetica, sans-serif">493.73 N avg</text>
+<path d="M667 142 L681 142" stroke="#FFB673" stroke-width="3"/><path d="M679 135 L688 142 L679 149 Z" fill="#FFB673"/>
+<rect x="690" y="34" width="200" height="216" rx="12" fill="#1A1A1A" stroke="#FFB673" stroke-width="2"/>
+<path d="M690 46 a12 12 0 0 1 12 -12 h176 a12 12 0 0 1 12 12 v22 h-200 Z" fill="#FFB673"/>
+<text x="790.0" y="57" text-anchor="middle" font-size="14" font-weight="600" fill="#000" font-family="Kanit, Arial, Helvetica, sans-serif">ROUND 3</text>
+<text x="790.0" y="96" text-anchor="middle" font-size="17" fill="#F9F9F9" font-family="Kanit, Arial, Helvetica, sans-serif">Final design</text>
+<text x="790.0" y="124" text-anchor="middle" font-size="13" fill="#B9B4B0" font-family="Kanit, Arial, Helvetica, sans-serif">1.0 mm lines +</text>
+<text x="790.0" y="143" text-anchor="middle" font-size="13" fill="#B9B4B0" font-family="Kanit, Arial, Helvetica, sans-serif">0.5 mm offset,</text>
+<text x="790.0" y="162" text-anchor="middle" font-size="13" fill="#B9B4B0" font-family="Kanit, Arial, Helvetica, sans-serif">10 tests + FEA</text>
+<rect x="706" y="192" width="168" height="46" rx="8" fill="#000" stroke="#FFB673" stroke-width="1.5"/>
+<text x="790.0" y="211" text-anchor="middle" font-size="13" font-weight="600" fill="#FFB673" font-family="Kanit, Arial, Helvetica, sans-serif">Final result</text>
+<text x="790.0" y="229" text-anchor="middle" font-size="12" fill="#F9F9F9" font-family="Kanit, Arial, Helvetica, sans-serif">425.50 N avg peak</text>
+<text x="12" y="286" font-size="13" letter-spacing="1" fill="#B9B4B0" font-family="Kanit, Arial, Helvetica, sans-serif">MANTIS SHRIMP ARCHES · CB-TPU</text>
+<rect x="12" y="298" width="878" height="54" rx="12" fill="#1A1A1A" stroke="#945937" stroke-width="2"/>
+<text x="34" y="331" font-size="14" fill="#B9B4B0" font-family="Kanit, Arial, Helvetica, sans-serif"><tspan fill="#F9F9F9" font-weight="600">1 to 5 bumps</tspan>  ·  same outer size (25 × 15 × 5 mm)  ·  compressed to find peak force</text>
+<rect x="672" y="309" width="200" height="32" rx="8" fill="#000" stroke="#FFB673" stroke-width="1.5"/>
+<text x="772" y="330" text-anchor="middle" font-size="13" font-weight="600" fill="#FFB673" font-family="Kanit, Arial, Helvetica, sans-serif">2 bumps win · 131.67 N</text>
+</svg>

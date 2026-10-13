@@ -1,0 +1,15 @@
+{
+  "name": "vbr-slidev",
+  "description": "Bio-Inspired Multifunctional 3D Printed Armor",
+  "private": true,
+  "scripts": {
+    "dev": "slidev slides.md --open",
+    "build": "slidev build slides.md --base /vbr/presentation/",
+    "export-pdf": "slidev export slides.md --format pdf --output vbr-armor.pdf",
+    "export-pptx": "slidev export slides.md --format pptx --output vbr-armor.pptx"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.49.0",
+    "@slidev/theme-default": "latest"
+  }
+}

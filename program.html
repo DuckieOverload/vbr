@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VBR Research Camp</title>
+  <meta name="description" content="How the Victory Bell Education & Research (VBR) Research Camp works: Dr. Yang's lab, daily structure, research teams, guest seminars and lab equipment.">
+  <meta name="theme-color" content="#0C0C0E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    .intro { position: relative; padding: clamp(2.5rem, 7vw, 5rem) 0 clamp(2rem, 5vw, 3.5rem); }
+    .intro h1 { font-size: clamp(2.3rem, 5.2vw, 3.8rem); margin-bottom: 1rem; }
+    .intro .lead { margin-bottom: 1rem; }
+    .intro .desc { color: var(--muted); max-width: 46rem; font-size: 1.05rem; }
+    .intro .desc a { color: var(--text); text-decoration-color: var(--red-text); text-underline-offset: 3px; }
+
+    /* mentor (deck slide 2) */
+    .mentor { display: grid; grid-template-columns: 220px 1fr 1.05fr; gap: clamp(1.5rem, 3vw, 2.5rem); align-items: start; }
+    .mentor .who h3 { font-size: 1.3rem; margin: 1rem 0 0.2rem; }
+    .mentor .who p { font-size: 0.85rem; color: var(--muted); }
+    .mentor .photo-glow::before { width: 60%; right: -15%; top: 10%; }
+    .mentor ul.dots { font-size: 0.92rem; margin-bottom: 1.2rem; }
+    .lab { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; }
+    .lab .card { padding: 1rem 1.1rem; }
+    .lab h3 { font-size: 1.02rem; margin-bottom: 0.25rem; }
+    .lab p { font-size: 0.82rem; color: var(--muted); line-height: 1.45; }
+    .mentor-callout { margin-top: 1.6rem; }
+
+    /* mentors and guest speakers */
+    .group { font-size: 1.15rem; color: var(--muted); margin: 2rem 0 1rem; }
+    .group:first-of-type { margin-top: 0; }
+    .people { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0.9rem; }
+    .person { padding: 1.15rem 1.2rem 1.25rem; }
+    .person .eyebrow { font-size: 0.66rem; letter-spacing: 0.18em; margin-bottom: 0.4rem; }
+    .person h3 { font-size: 1.2rem; margin-bottom: 0.3rem; }
+    .person .role { font-size: 0.84rem; color: var(--text); line-height: 1.45; margin-bottom: 0.6rem; }
+    .person .tags { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+
+    /* daily timeline */
+    .day { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+    .day .eyebrow { margin-bottom: 0.35rem; }
+    .day p { font-size: 0.92rem; color: var(--muted); }
+    .day .card.red p, .day .card.red .eyebrow { color: #fff; }
+    .roles { margin-top: 1.6rem; }
+    .roles p { color: var(--muted); max-width: 46rem; margin-top: 1rem; }
+
+    /* teams */
+    .teams { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+    .teams .card { font-family: 'Kanit', sans-serif; font-size: 1.15rem; min-height: 7.5rem; display: flex; flex-direction: column; justify-content: flex-end; }
+    .teams .card small { font-family: 'Open Sans', sans-serif; font-size: 0.82rem; margin-top: 0.3rem; opacity: 0.9; }
+
+    /* weeks */
+    .weeks { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+    .lab-photos { display: grid; grid-template-columns: 1.3fr 1.3fr 1fr; gap: 1.2rem; margin-bottom: 1.6rem; }
+    .lab-photos img { width: 100%; height: clamp(240px, 28vw, 360px); object-fit: cover; }
+    .lab-photos figcaption { font-size: 0.75rem; color: var(--faint); margin-top: 0.6rem; }
+    .week { padding: 1.6rem; }
+    .week h3 { font-size: 1.45rem; margin: 0.2rem 0 1rem; }
+    .week h4 { font-size: 0.72rem; font-weight: 400; letter-spacing: 0.22em; text-transform: uppercase; color: var(--red-text); margin: 1.3rem 0 0.4rem; }
+    .week p, .week li { font-size: 0.93rem; color: var(--muted); }
+    .week strong { color: var(--text); }
+    .week.wide { grid-column: 1 / -1; display: grid; grid-template-columns: 1.2fr 1fr; gap: clamp(1.5rem, 3vw, 2.5rem); align-items: start; }
+    .week.wide figure img { width: 100%; }
+    .week.wide .photos { display: grid; gap: 1.2rem; }
+    .week.wide .award { margin-top: 0.4rem; }
+    .week.wide figcaption { font-size: 0.75rem; color: var(--faint); margin-top: 0.6rem; }
+
+    /* camp to paper */
+    .split { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+    .split p { color: var(--muted); margin-bottom: 1.4rem; }
+    .split .schedule { color: var(--muted); margin-bottom: 1.6rem; }
+
+    @media (max-width: 960px) {
+      .mentor { grid-template-columns: 200px 1fr; }
+      .mentor .lab-col { grid-column: 1 / -1; }
+      .day, .teams { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 720px) {
+      .mentor, .weeks, .split, .week.wide, .lab-photos { grid-template-columns: 1fr; }
+      .lab-photos img { height: auto; }
+      .mentor .who { max-width: 220px; }
+    }
+    @media (max-width: 480px) {
+      .day, .teams, .lab { grid-template-columns: 1fr; }
+      .teams .card { min-height: 0; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="tab" href="./" aria-label="Project home">VBR</a>
+    <nav class="nav" aria-label="Site">
+      <a href="./">Project</a>
+      <a href="presentation/">Slides</a>
+      <a href="program.html" aria-current="page">Research camp</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div class="circuits" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="eyebrow">Victory Bell Education &amp; Research &middot; 2026</div>
+        <h1>The VBR Research Camp</h1>
+        <p class="lead">Real engineering research, from first experiment to final paper</p>
+        <p class="desc">
+          High school students work in small research teams on real engineering problems, exploring materials science,
+          3D printing and bio-inspired design, with daily instruction from
+          <a href="https://yanglab.sdsu.edu/category/people/pi/" target="_blank" rel="noopener">Dr. Yang Yang</a>
+          of the <a href="https://yanglab.sdsu.edu/" target="_blank" rel="noopener">SDSU Yang Lab</a>.
+          Each team carries its project from first experiment to a written paper and a final presentation.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="eyebrow">Meet our mentor</div>
+        <h2 class="section-title">Dr. Yang Yang &amp; the Yang Lab</h2>
+        <p class="section-sub">The lab studies bioinspired 3D printing: how structures found in nature can be printed into stronger, smarter materials.</p>
+        <div class="mentor">
+          <div class="who">
+            <figure class="photo-glow"><img src="images/yang.jpg" alt="Dr. Yang Yang"></figure>
+            <h3>Dr. Yang Yang</h3>
+            <p>Associate Professor of Mechanical Engineering, San Diego State University</p>
+          </div>
+          <div>
+            <div class="eyebrow">Background</div>
+            <ul class="dots">
+              <li>Ph.D. in Physics &amp; Bioengineering, Wuhan University and UCLA (2015)</li>
+              <li>Postdoc at the USC Center for Advanced Manufacturing</li>
+              <li>75+ peer-reviewed papers, including Science Advances and Nature Communications</li>
+            </ul>
+            <div class="eyebrow">Recent awards</div>
+            <ul class="dots">
+              <li>NSF CAREER Award (2025)</li>
+              <li>ASME Rising Star in Mechanical Engineering (2025)</li>
+              <li>SME Outstanding Young Manufacturing Engineer (2022)</li>
+            </ul>
+          </div>
+          <div class="lab-col">
+            <div class="eyebrow">The lab &middot; Bioinspired 3D printing</div>
+            <div class="lab">
+              <div class="card"><h3>Bioinspired structures</h3><p>Nacre, lobster-claw and cuttlebone-inspired armor</p></div>
+              <div class="card"><h3>Robotics &amp; wearables</h3><p>Star-nose-inspired stretchable skin sensors</p></div>
+              <div class="card"><h3>Biomedical</h3><p>3D-printed bone implants, painless microneedles</p></div>
+              <div class="card"><h3>Environmental</h3><p>Water-repelling surfaces inspired by Salvinia leaves</p></div>
+            </div>
+          </div>
+        </div>
+        <p class="callout mentor-callout"><strong>Where our project comes from:</strong> the lab's nacre-inspired 3D-printed armor that senses its own damage (Yang et al., Science Advances, 2019)</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="eyebrow">Mentors &amp; guest speakers</div>
+        <h2 class="section-title">Learning From Researchers</h2>
+        <p class="section-sub">Alongside Dr. Yang, campers heard from and worked with researchers and engineers from universities and companies across the country.</p>
+        <h3 class="group">Universities</h3>
+        <div class="people">
+            <div class="card person">
+              <div class="eyebrow">San Diego State University</div>
+              <h3>Dr. Xie</h3>
+              <p class="role">Professor, Electrical and Computer Engineering</p>
+              <p class="tags">Unmanned aerial systems &middot; Airborne computing &amp; UAV systems &middot; Artificial intelligence &middot; Cyber-physical systems &middot; Large-scale dynamical networks</p>
+            </div>
+            <div class="card person">
+              <div class="eyebrow">Stanford University</div>
+              <h3>Dr. Larson</h3>
+              <p class="role">Assistant Professor of Mechanical Engineering</p>
+              <p class="tags">Multimaterial 3D printing &middot; Soft robotics &middot; Composite materials &middot; Architected &amp; functional materials &middot; X-ray computed tomography</p>
+            </div>
+            <div class="card person">
+              <div class="eyebrow">University of Wisconsin–Madison</div>
+              <h3>Dr. Kuang</h3>
+              <p class="role">Assistant Professor, Mechanical Engineering and the Polymer Engineering Center</p>
+              <p class="tags">Smart polymer composites &middot; Biomaterials and sustainability &middot; Advanced manufacturing &middot; Ultrasound &amp; minimally invasive medicine</p>
+            </div>
+            <div class="card person">
+              <div class="eyebrow">University of Southern California</div>
+              <h3>Dr. Zeng</h3>
+              <p class="role">Department of Biomedical Engineering</p>
+              <p class="tags">Ultrasound engineering &amp; imaging &middot; AI-integrated biomedical systems &middot; Wearable &amp; implantable medical devices &middot; Neuromodulation &amp; therapeutic ultrasound</p>
+            </div>
+            <div class="card person">
+              <div class="eyebrow">Johns Hopkins University</div>
+              <h3>Dr. Zhu</h3>
+              <p class="role">Associate Research Professor, Hopkins Extreme Materials Institute</p>
+              <p class="tags">Impact mechanics &middot; Protective technology &middot; Traumatic biomechanics &middot; AI-driven mechanical design &middot; Injury biomechanics</p>
+            </div>
+            <div class="card person">
+              <div class="eyebrow">University of Pennsylvania</div>
+              <h3>Dr. Yu</h3>
+              <p class="role">Researcher in advanced manufacturing, bioinspired materials and multifunctional structures</p>
+              <p class="tags">Solid mechanics &amp; polymers &middot; Engineered living materials &middot; Sustainable materials &middot; Advanced manufacturing &middot; 3D printing</p>
+            </div>
+            <div class="card person">
+              <div class="eyebrow">University of Cambridge</div>
+              <h3>Dr. Jin</h3>
+              <p class="role">Researcher, Department of Electrical Engineering</p>
+              <p class="tags">Bioelectronics &middot; Neurotechnology &middot; Flexible electronics &middot; Transparent electrodes</p>
+            </div>
+            <div class="card person">
+              <div class="eyebrow">Caltech</div>
+              <h3>Dr. He</h3>
+              <p class="role">Postdoctoral Researcher</p>
+              <p class="tags">Bioinspired design &middot; 3D printing &middot; Smart materials &middot; Wearable sensors</p>
+            </div>
+            <div class="card person">
+              <div class="eyebrow">National University</div>
+              <h3>Dr. Fu</h3>
+              <p class="role">Professor and Academic Program Director, B.S. in Electrical and Computer Engineering</p>
+              <p class="tags">Control systems &amp; engineering &middot; Robust and networked control &middot; Embedded systems &amp; robotics &middot; Stochastic optimization</p>
+            </div>
+            <div class="card person">
+              <div class="eyebrow">University at Buffalo</div>
+              <h3>Dr. Lichade</h3>
+              <p class="role">Assistant Professor, Mechanical &amp; Aerospace Engineering</p>
+              <p class="tags">Additive manufacturing &middot; Functional materials &middot; Multiscale manufacturing &middot; Process control and optimization &middot; Bio-inspired design</p>
+            </div>
+            <div class="card person">
+              <div class="eyebrow">Baylor University</div>
+              <h3>Dr. Zhang</h3>
+              <p class="role">Assistant Professor of Mechanical Engineering</p>
+              <p class="tags">Multiscale computational modeling &middot; Machine learning for materials design &middot; Biomaterials &amp; green polymer composites &middot; Medium/high entropy alloys</p>
+            </div>
+        </div>
+        <h3 class="group">Industry &amp; community</h3>
+        <div class="people">
+            <div class="card person">
+              <div class="eyebrow">Meta Reality Labs · Caltech</div>
+              <h3>Dr. Lu</h3>
+              <p class="role">Research Scientist; formerly a Postdoctoral Research Associate at MIT</p>
+              <p class="tags">Ultrasound &amp; acoustics &middot; Biomedical imaging &middot; Neuromodulation &middot; Artificial intelligence &middot; Wearable technology</p>
+            </div>
+            <div class="card person">
+              <div class="eyebrow">Ford Motor Company</div>
+              <h3>Dr. Jin</h3>
+              <p class="role">Engineer in IoT, robotics, automation and electric vehicles; Ph.D., USC</p>
+              <p class="tags">Robotics &amp; automation &middot; Internet of Things &middot; Additive &amp; semiconductor manufacturing &middot; Electric vehicles &middot; Software engineering</p>
+            </div>
+            <div class="card person">
+              <div class="eyebrow">General Atomics</div>
+              <h3>Ms. Toral</h3>
+              <p class="role">Aerospace engineer and VP of Programs at a nonprofit that runs STEM competitions for high school students</p>
+              <p class="tags">Aircraft structural design &middot; Aerospace engineering &middot; Applied engineering in defense &amp; aviation systems</p>
+            </div>
+            <div class="card person">
+              <div class="eyebrow">Community</div>
+              <h3>Lily Zhou</h3>
+              <p class="role">Entrepreneur, philanthropist and youth mentor</p>
+              <p class="tags">Entrepreneurship &middot; Community engagement &middot; Cultural exchange &middot; Philanthropy &amp; social impact &middot; Youth development &amp; mentorship</p>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="eyebrow">How it works</div>
+        <h2 class="section-title">A Typical Day</h2>
+        <p class="section-sub">Every day runs the same research cycle: learn, experiment, check in, review.</p>
+        <div class="day">
+          <div class="card">
+            <div class="eyebrow">Morning</div>
+            <h3>Lecture</h3>
+            <p>About an hour with Professor Yang on the day's scientific concepts, research methods and experimental techniques.</p>
+          </div>
+          <div class="card">
+            <div class="eyebrow">Midday</div>
+            <h3>Team research</h3>
+            <p>Teams run experiments with their teaching assistants, collect and analyze data, record observations and update their slides.</p>
+          </div>
+          <div class="card">
+            <div class="eyebrow">All day</div>
+            <h3>Check-ins</h3>
+            <p>Professor Yang visits every group to monitor progress, answer questions and help work through research problems.</p>
+          </div>
+          <div class="card red">
+            <div class="eyebrow">Around 4 PM</div>
+            <h3>Daily review</h3>
+            <p>Each team and its TA meet with Professor Yang to discuss results, refine slides and prepare for the final presentation.</p>
+          </div>
+        </div>
+        <div class="roles">
+          <div class="chips">
+            <span class="chip">Performing experiments</span>
+            <span class="chip">Recording data</span>
+            <span class="chip">Analyzing results</span>
+            <span class="chip">Organizing findings</span>
+            <span class="chip">Preparing presentations</span>
+          </div>
+          <p>TAs assign each team member a different responsibility and rotate the roles through the program, so every student works through each stage of the research process.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="eyebrow">Four teams</div>
+        <h2 class="section-title">Research Teams</h2>
+        <p class="section-sub">Each team tackles its own engineering problem.</p>
+        <div class="teams">
+          <div class="card red">Mechanical Engineering<small>This project: self-sensing armor &middot; Excellence in Engineering Design Award</small></div>
+          <div class="card">Biomedical Engineering</div>
+          <div class="card">Environmental Engineering</div>
+          <div class="card">Robotics</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="eyebrow">Newsletters</div>
+        <h2 class="section-title">Week by Week</h2>
+        <p class="section-sub">Highlights from the camp newsletters.</p>
+        <div class="lab-photos">
+          <figure>
+            <img src="images/lab-printer-bed.jpg" alt="Black glass sponge and grid lattice samples on the bed of a Bambu Lab 3D printer">
+            <figcaption>Glass sponge and grid lattices fresh off the Bambu Lab printer</figcaption>
+          </figure>
+          <figure>
+            <img src="images/lab-testing.jpg" alt="Three students clipping multimeter leads to a printed sample">
+            <figcaption>Clipping a printed sample to the multimeter to read its resistance</figcaption>
+          </figure>
+          <figure>
+            <img src="images/lab-cad.jpg" alt="Students modeling parts on laptops at a workbench, with black printed arch prototypes on the table">
+            <figcaption>Modeling in CAD, with printed arch prototypes on the bench</figcaption>
+          </figure>
+        </div>
+        <div class="weeks">
+          <article class="card week">
+            <div class="eyebrow">Week 1 &middot; Newsletter No. 01</div>
+            <h3>Settling into the research cycle</h3>
+            <p>Teams began the daily cycle of lecture, experiments, check-ins and afternoon reviews, with a team-building lunch to round out the week.</p>
+            <h4>Equipment of the week</h4>
+            <p><strong>FLIR E8 Pro</strong> handheld thermal camera, which turns infrared radiation into thermal images so temperature differences can be found without touching anything. Infrared thermography is one of the bulky inspection methods the armor project hopes to make unnecessary in the field.</p>
+          </article>
+          <article class="card week">
+            <div class="eyebrow">Week 2 &middot; Newsletter No. 02</div>
+            <h3>Distinguished guest seminars</h3>
+            <ul class="dots">
+              <li><strong>Prof. Kuang</strong>, UW–Madison: &ldquo;Adaptive Materials Enabled Additive Manufacturing&rdquo;</li>
+              <li><strong>Prof. Larson</strong>, Stanford: &ldquo;Multimaterial 3D Printing of Living &amp; Multifunctional Matter&rdquo;</li>
+              <li><strong>Dr. Zeng</strong>, USC: &ldquo;Ultrasound Transducer Design&rdquo;</li>
+            </ul>
+            <h4>Equipment of the week</h4>
+            <p><strong>Bambu Lab H2C</strong> multi-material, multi-tool 3D printer, one of the two printers used to make this project's CB-PLA and CB-TPU models.</p>
+            <h4>Aerospace challenge</h4>
+            <p>Coach Kelsey, an aerospace engineer and drone-competition coach, introduced students to drone competitions. VBR is forming a Drone Competition Team this fall.</p>
+          </article>
+          <article class="card week wide">
+            <div>
+              <div class="eyebrow">Week 3 &middot; Newsletter No. 03</div>
+              <h3>Final presentations and a look ahead</h3>
+              <h4>Guest speaker</h4>
+              <p><strong>Chris Zheng</strong>, a rising high school senior and former VBR Summer Research Program participant, presented &ldquo;Connect Your Research with the Real World&rdquo;: advice on writing scientific papers, the publication process, presenting at academic conferences, and turning research into real-world impact through innovation and entrepreneurship. Hearing from someone who was in the campers' seats just a year earlier made the road ahead feel achievable.</p>
+              <h4>Final Presentation Day</h4>
+              <p>At the end of the three weeks of in-person labs, every team presented its research journey to parents and a panel of judges, from the research question and engineering design through testing, iteration, final design decisions and data analysis. The highlight was the Q&amp;A, where judges and parents asked in-depth questions and the campers answered with confidence and clarity.</p>
+              <div class="award"><div class="award-icon"><svg width="24" height="24" viewBox="0 0 40 40" fill="none" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M13 4l5 11M27 4l-5 11"/><circle cx="20" cy="25" r="10"/><path d="M20 19.5l1.7 3.4 3.8.6-2.7 2.7.6 3.8-3.4-1.8-3.4 1.8.6-3.8-2.7-2.7 3.8-.6z" fill="#fff" stroke="none"/></svg></div><div><span>Mechanical Engineering Team</span><strong>Excellence in Engineering Design Award</strong></div></div>
+              <h4>What's next</h4>
+              <p>With three weeks of in-person lab research done, the teams moved on to six weeks of writing up their research papers.</p>
+            </div>
+            <div class="photos">
+              <figure>
+                <img src="images/meche-team-finale.jpg" alt="The five Mechanical Engineering Team members holding their Excellence in Engineering Design Award certificates, with Dr. Yang and a staff member, in front of a screen showing the award">
+                <figcaption>The Mechanical Engineering Team with its Excellence in Engineering Design Award</figcaption>
+              </figure>
+              <figure>
+                <img src="images/meche-team-presenting.jpg" alt="Three team members presenting their FEA line offset comparison slide to parents and judges">
+                <figcaption>Presenting the FEA line-offset comparison on Final Presentation Day</figcaption>
+              </figure>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap split">
+        <figure class="photo-glow low">
+          <img src="images/meche-team-outdoors.jpg" alt="Mechanical Engineering Team students in camp t-shirts outside the Victory Bell building, listening to an instructor">
+          <figcaption>Mechanical Engineering Team, week 1</figcaption>
+        </figure>
+        <div>
+          <div class="eyebrow">The result</div>
+          <h2 class="section-title">From Camp to Paper</h2>
+          <p>
+            The Mechanical Engineering Team's project, <em>Bio-Inspired Multifunctional 3D Printed Armor</em>,
+            designed, printed and crush-tested lattices modeled on the deep-sea glass sponge and the mantis shrimp
+            over four rounds of experiments, then wrote the results up as a research paper.
+          </p>
+          <div class="eyebrow">Schedule</div>
+          <ul class="dots schedule">
+            <li><strong>3 weeks</strong> of in-person labs and experiments</li>
+            <li><strong>6 weeks</strong> of paper writing for publication</li>
+          </ul>
+          <a class="button" href="presentation/">See the slides <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="sig">VBR Mechanical Team &nbsp;·&nbsp; SDSU Yang Lab</div>
+      <p>San Diego State University &middot; <a href="https://yanglab.sdsu.edu/" target="_blank" rel="noopener">Yang Lab</a> &middot; Victory Bell Education &amp; Research</p>
+    </div>
+  </footer>
+</body>
+</html>

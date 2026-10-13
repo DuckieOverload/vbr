@@ -1,0 +1,129 @@
+/* ── Hide Slidev goto dialog autocomplete overlay ─────────────────── */
+#slidev-goto-dialog { display: none !important; }
+
+/* ── VBR theme: mirrors Bio-Inspired_Armor_Slides_v6.pptx ────────────
+   The canvas is 1000 px wide (canvasWidth in slides.md), so 100 px is one
+   inch of the 10 × 5.625 in PowerPoint slide and <Box> coordinates are the
+   deck's own inches. Type sizes are given in points, as in PowerPoint.   */
+:root {
+  --bg0: #0C0C0E;
+  --bg2: #222226;
+  --card: #1E1F23;
+  --card2: #27282D;
+  --line: #3B3C43;
+  --red: #B81E34;
+  --red2: #8F1427;
+  --red-text: #E0435A;
+  --sdsu: #A6192E;
+  --muted: #B3B5BC;
+  --faint: #7E8089;
+  --red-fill: linear-gradient(180deg, var(--red), var(--red2));
+}
+
+.vbr {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--bg0), var(--bg2));
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15.3px;
+  line-height: 1.18;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.vbr h1, .vbr h2, .vbr h3 {
+  font-family: Kanit, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  line-height: 1.12;
+  color: inherit;
+}
+.vbr h1 { font-size: 1em; }
+.vbr h2 { font-size: 20.8px; margin-bottom: 8.3px; }   /* 15 pt */
+.vbr h3 { font-size: 19.4px; margin-bottom: 8.3px; }   /* 14 pt */
+
+/* slide title on content and section slides (the PowerPoint title placeholder) */
+.vbr-content > h1 {
+  position: absolute;
+  left: 75px;
+  top: 98px;
+  width: 850px;
+  font-size: 36.1px;   /* 26 pt */
+  line-height: 1.05;
+  z-index: 5;
+}
+
+/* eyebrow: small red spaced capitals; #### in markdown */
+.vbr .eyebrow, .vbr h4 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 11.8px;   /* 8.5 pt */
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+  color: var(--red-text);
+  line-height: 1.2;
+  margin: 0 0 var(--after, 5.6px);
+}
+
+.vbr p { margin: 0 0 var(--after, 5.6px); }
+.vbr p:last-child { margin-bottom: 0; }
+.vbr ul { list-style: none; margin: 0; padding: 0; }
+.vbr li {
+  position: relative;
+  padding-left: 17px;
+  margin: 0 0 var(--after, 5.6px);
+  line-height: 1.15;
+}
+.vbr li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  font-family: Arial, sans-serif;
+  color: var(--bullet, var(--red-text));
+}
+.vbr ul.sq li::before, .vbr .sq li::before {
+  content: '■';
+  font-size: 0.62em;
+  top: 0.32em;
+}
+.vbr strong { font-weight: 700; color: var(--strong, inherit); }
+.vbr a { color: var(--red-text); }
+
+/* positioned box: see components/Box.vue */
+.vbr .box {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.vbr .box > .svg-inline, .vbr .box > .svg-inline > svg { width: 100%; height: 100%; display: block; }
+.vbr .box > img, .vbr .box > video {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.vbr .box.accent-top::before, .vbr .box.accent-left::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--accent, var(--red-text));
+}
+.vbr .box.accent-top::before { right: 0; height: 6px; }
+.vbr .box.accent-left::before { bottom: 0; width: 6px; }
+
+.vbr .credit {
+  font-size: 9px;   /* 6.5 pt */
+  color: var(--faint);
+}
+
+/* small card headings, tags and markers used on several slides */
+.vbr h3.mini { font-size: 13.9px; color: #fff; margin-bottom: 2.8px; line-height: 1.1; }
+.vbr h3.mini.red { color: var(--red-text); }
+.vbr .tag { font-weight: 700; letter-spacing: 2.1px; }
+.vbr .arrow { background: var(--red-text); clip-path: polygon(0 0, 100% 50%, 0 100%); }
+.vbr .crack-ring { border: 3.5px solid var(--red-text); border-radius: 50%; }
