@@ -20,7 +20,7 @@ layout: bleed
      10 × 5.625 in PowerPoint slide; size is in points. -->
 
 <Glow cx="7.56" cy="3.01" r="1.8" />
-<Box x="5.7" y="1.01" w="3.74" h="3.74" img="deck/helmet.png" fit="contain" alt="Black 3D-printed lattice combat helmet" />
+<Box x="6.1675" y="1.4775" w="2.805" h="2.805" img="deck/helmet-lattice.png" fit="contain" alt="CAD render of a 3D-printed bio-inspired lattice helmet liner" />
 <Box x="0.75" y="1.1" w="5" class="eyebrow">VBR Research Camp 2026</Box>
 
 <Box x="0.75" y="1.4" w="5" h="1.85" size="31" line="1.1">
