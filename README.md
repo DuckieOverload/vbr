@@ -26,7 +26,7 @@ At the Research Experience's Final Presentation Day, the team received the **Exc
 | `Bio-Inspired_Armor_Slides.pptx` | The editable PowerPoint deck (dark greys and SDSU red, native charts from the team's data, the hammer demo video), downloadable from the site |
 | `images/svg/` | The piezoresistance, nature-to-CAD and CAD lattice/arch figures as standalone SVG files |
 
-The final research paper is published in the [Journal of Future Science and Engineering](https://journaloffuturescienceandengineering.org/index.php/JFSE/article/view/15/7) and linked from the Research Paper card on the home page. A copy of the latest version is kept in the repo root as [`Bio-Inspired_3D_Printed_Armor.pdf`](Bio-Inspired_3D_Printed_Armor.pdf).
+The final research paper is published in the [Journal of Future Science and Engineering](https://journaloffuturescienceandengineering.org/index.php/JFSE/article/view/15/7) and linked from the Research Paper card on the home page. The published PDF is also kept in the repo root as [`Bio-Inspired Multifunctional 3D Printed Printed Protective Structures.docx.pdf`](<Bio-Inspired Multifunctional 3D Printed Printed Protective Structures.docx.pdf>).
 
 ## Running Locally
 
