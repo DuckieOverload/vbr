@@ -2,9 +2,9 @@
 
 **Armor That Can Feel Its Own Damage**
 
-**[Website](https://duckieoverload.github.io/vbr/)** &nbsp;·&nbsp; [Interactive slides](https://duckieoverload.github.io/vbr/presentation/) &nbsp;·&nbsp; [PowerPoint deck](https://duckieoverload.github.io/vbr/Bio-Inspired_Armor_Slides.pptx) &nbsp;·&nbsp; [The research camp](https://duckieoverload.github.io/vbr/program.html)
+**[Website](https://duckieoverload.github.io/vbr/)** &nbsp;·&nbsp; [Interactive slides](https://duckieoverload.github.io/vbr/presentation/) &nbsp;·&nbsp; [PowerPoint deck](https://duckieoverload.github.io/vbr/Bio-Inspired_Armor_Slides.pptx) &nbsp;·&nbsp; [The research experience](https://duckieoverload.github.io/vbr/program.html)
 
-A team research project by **Emmet Muschenetz**, Raina, Jayden, Jaycen and Peggy (the VBR Mechanical Engineering Team), under the direction of [Dr. Yang Yang](https://yanglab.sdsu.edu/category/people/pi/) of the [SDSU Yang Lab](https://yanglab.sdsu.edu/). Part of the 2026 Victory Bell Education & Research (VBR) Research Camp: three weeks of in-person labs followed by six weeks of paper writing.
+A team research project by **Emmet Muschenetz**, Raina, Jayden, Jaycen and Peggy (the VBR Mechanical Engineering Team), under the direction of [Dr. Yang Yang](https://yanglab.sdsu.edu/category/people/pi/) of the [SDSU Yang Lab](https://yanglab.sdsu.edu/). Part of the 2026 Victory Bell Education & Research (VBR) Research Experience: three weeks of in-person labs followed by six weeks of paper writing.
 
 ## About
 
@@ -12,21 +12,21 @@ Body armor can build up internal micro-cracks from repeated impacts with no visi
 
 The designs borrow from two animals built to survive large forces: the lattice skeleton of the deep-sea glass sponge (*Euplectella aspergillum*) and the dactyl club of the mantis shrimp (*Odontodactylus scyllarus*). Across four rounds of compression testing, a glass sponge lattice with 1.0 mm diagonal lines and a +0.5 mm spacing offset gave the best balance of strength and electrical response. It was about 48% stronger than a plain grid of the same size. For the flexible TPU parts, a two-arch mantis shrimp design carried the most load (131.67 N).
 
-At the camp's Final Presentation Day, the team received the **Excellence in Engineering Design Award**.
+At the Research Experience's Final Presentation Day, the team received the **Excellence in Engineering Design Award**.
 
 ## Contents
 
 | File | Description |
 |------|-------------|
 | `index.html` | Project landing page |
-| `program.html` | How the VBR Research Camp works: Dr. Yang's lab, a typical day, week by week |
+| `program.html` | How the VBR Research Experience works: Dr. Yang's lab, a typical day, week by week |
 | `site.css` | Shared styles for the two pages, matching the PowerPoint deck (dark greys, SDSU red, Kanit and Open Sans) |
 | `images/` | Photos, logos and circuit-trace art used by the HTML pages |
 | `presentation/` | Interactive Slidev presentation: a web version of the PowerPoint deck, slide for slide, with charts drawn from `presentation/data/charts.json` (exported from the team's workbook) |
 | `Bio-Inspired_Armor_Slides.pptx` | The editable PowerPoint deck (dark greys and SDSU red, native charts from the team's data, the hammer demo video), downloadable from the site |
 | `images/svg/` | The piezoresistance, nature-to-CAD and CAD lattice/arch figures as standalone SVG files |
 
-The research paper PDF will be added once the final version is ready. Save it as `Bio-Inspired_3D_Printed_Armor.pdf` in the repo root and switch on its card in `index.html` (instructions are in the comment there).
+The final research paper is published in the [Journal of Future Science and Engineering](https://journaloffuturescienceandengineering.org/index.php/JFSE/article/view/15/7) and linked from the Research Paper card on the home page. The published PDF is also kept in the repo root as [`Bio-Inspired Multifunctional 3D Printed Printed Protective Structures.docx.pdf`](<Bio-Inspired Multifunctional 3D Printed Printed Protective Structures.docx.pdf>).
 
 ## Running Locally
 
