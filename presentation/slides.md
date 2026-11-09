@@ -1,7 +1,7 @@
 ---
 theme: default
 title: Teaching Armor to Feel Its Own Damage
-info: Bio-inspired, self-sensing 3D-printed armor. VBR Mechanical Engineering Team, SDSU Yang Lab, VBR Research Camp 2026.
+info: Bio-inspired, self-sensing 3D-printed armor. VBR Mechanical Engineering Team, SDSU Yang Lab, VBR Research Experience 2026.
 canvasWidth: 1000
 aspectRatio: 16/9
 colorSchema: dark
@@ -21,7 +21,7 @@ layout: bleed
 
 <Glow cx="7.56" cy="3.01" r="1.8" />
 <Box x="6.1675" y="1.4775" w="2.805" h="2.805" img="deck/helmet-lattice.png" fit="contain" alt="CAD render of a 3D-printed bio-inspired lattice helmet liner" />
-<Box x="0.75" y="1.1" w="5" class="eyebrow">VBR Research Camp 2026</Box>
+<Box x="0.75" y="1.1" w="5" class="eyebrow">VBR Research Experience 2026</Box>
 
 <Box x="0.75" y="1.4" w="5" h="1.85" size="31" line="1.1">
 
@@ -704,7 +704,7 @@ eyebrow: Impact
 </style>
 
 ---
-eyebrow: VBR Research Camp
+eyebrow: VBR Research Experience
 ---
 
 # Behind the Research
